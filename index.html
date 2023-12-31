@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="queries.css" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Tip calculator app</title>
+    </head>
+    <body>
+        <main>
+            <div class="header">
+                <img src="images/logo.svg" alt="splitter logo" />
+            </div>
+            <section class="form-section">
+                <form>
+                    <div class="bill-container">
+                        <label for="bill-input" id="bill-label">Bill</label
+                        ><br />
+                        <input
+                            type="text"
+                            placeholder="0"
+                            id="bill-input"
+                            name="bill-input"
+                        />
+                    </div>
+                    <p id="tip-label">Select Tip %</p>
+                    <div class="tip-percentages">
+                        <div class="tip-percentage-container">
+                            <p>5%</p>
+                        </div>
+                        <div class="tip-percentage-container">
+                            <p>10%</p>
+                        </div>
+                        <div class="tip-percentage-container">
+                            <p>15%</p>
+                        </div>
+                        <div class="tip-percentage-container">
+                            <p>25%</p>
+                        </div>
+                        <div class="tip-percentage-container">
+                            <p>50%</p>
+                        </div>
+                        <div class="tip-percentage-container">
+                            <input
+                                placeholder="Custom"
+                                type="text"
+                                id="custom-tip-input"
+                                name="custom-tip"
+                            />
+                        </div>
+                    </div>
+                    <div class="people-container">
+                        <label for="people-input" id="people-label"
+                            >Number of People</label
+                        ><br />
+                        <input
+                            type="text"
+                            placeholder="0"
+                            id="people-input"
+                            name="people-input"
+                        />
+                    </div>
+                </form>
+                <div class="tip-result-container">
+                    <div>
+                        <div class="tip-amount-container">
+                            <div class="tip-amount-text">
+                                <p class="tip-amount">Tip Amount</p>
+                                <p class="person">/ person</p>
+                            </div>
+                            <h1>$0.00</h1>
+                        </div>
+                        <div class="total-tip-container">
+                            <div class="total-tip-text">
+                                <p class="total">Total</p>
+                                <p class="person">/ person</p>
+                            </div>
+                            <h1>$0.00</h1>
+                        </div>
+                    </div>
+                    <button class="reset-btn">RESET</button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

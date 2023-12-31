@@ -1,0 +1,43 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+    .header {
+        margin-top: 4rem;
+    }
+
+    body {
+        display: flex;
+        align-items: stretch;
+    }
+    .form-section {
+        grid-template-columns: 1fr;
+        width: 37.5rem;
+        height: 74rem;
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    .tip-result-container {
+        width: 29rem;
+        height: 27.9rem;
+        border-radius: 0.9rem;
+        margin-top: 4rem;
+    }
+
+    .reset-btn {
+        padding: 1.5rem 0;
+        width: 25rem;
+        height: 4.8rem;
+    }
+}
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

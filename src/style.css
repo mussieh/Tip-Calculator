@@ -1,0 +1,257 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+Font size: 15px
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+- Tints:
+
+
+- Shades: 
+
+
+- Accents:
+- Greys
+
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 10px; */
+
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.form-section {
+    width: 92.4rem;
+    height: 48.1rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#bill-label,
+#tip-label,
+#people-label {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: hsl(186, 14%, 43%);
+}
+
+#bill-input {
+    background: url("images/icon-dollar.svg") no-repeat 2rem;
+    margin-bottom: 4rem;
+}
+
+#people-input {
+    background: url("images/icon-person.svg") no-repeat 2rem;
+}
+
+#bill-input,
+#people-input {
+    width: 29rem;
+    height: 3.5rem;
+    text-align: right;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 2.4rem;
+    border-radius: 0.4rem;
+    padding: 2rem;
+    border: none;
+}
+
+#bill-input:focus,
+#people-input:focus,
+#custom-tip-input:focus {
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.tip-percentages {
+    width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.tip-percentage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    color: hsl(189, 41%, 97%);
+    background-color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+#custom-tip-input {
+    width: 9rem;
+    height: 4rem;
+    background-color: hsl(189, 41%, 97%);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    padding: 1rem;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+}
+
+.tip-result-container {
+    width: 41.3rem;
+    height: 41.7rem;
+    border-radius: 0.9rem;
+    background-color: hsl(183, 100%, 15%);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip-amount {
+    color: hsl(189, 41%, 97%);
+}
+
+.total {
+    color: hsl(189, 41%, 97%);
+}
+
+.person {
+    color: hsl(186, 14%, 43%);
+}
+
+h1 {
+    font-size: 3.6rem;
+    color: hsl(172, 67%, 45%);
+}
+
+.tip-amount-container,
+.total-tip-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.reset-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+    background-color: hsl(172, 67%, 45%);
+    color: rgb(40, 92, 98);
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.reset-btn:disabled {
+    background-color: rgb(46, 102, 108);
+}
+
+.active-state {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.zero-error {
+    visibility: hidden;
+    color: red;
+}
+
+.error-state {
+    border: 2px solid red;
+}
+
+.error-container {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
